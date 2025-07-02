@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">🌦️ MyWeather</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <div
+      id="loaderWrapper"
+      class="d-none position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-75 z-3 d-flex justify-content-center align-items-center"
+    >
+      <span class="loader"></span>
+    </div>
+    <div class="container my-5">
+      <h1 class="text-center text-white mb-4">🌤️ Weather Forecast</h1>
+
+      <div class="input-group w-50 mx-auto mb-5">
+        <input
+          id="cityInput"
+          type="text"
+          class="form-control"
+          placeholder="Enter city name"
+        />
+        <button onclick="getWeather()" class="btn btn-primary">Search</button>
+      </div>
+
+      <h2 id="cityTitle" class="text-center text-white mb-4"></h2>
+
+      <div id="forecastRow" class="row justify-content-center g-4">
+        <!-- Weather cards go here -->
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+      <p class="fs-4"
+        >© 2025 Omar. Weather data from
+        <a
+          href="https://www.weatherapi.com/"
+          class="text-info text-decoration-none"
+          target="_blank"
+          >WeatherAPI</a
+        ></p
+      >
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
